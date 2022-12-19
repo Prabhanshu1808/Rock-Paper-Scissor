@@ -2,31 +2,41 @@ package com.playerService;
 
 
 import com.playerService.service.PlayerServiceImpl;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ContextConfiguration;
+import org.springframework.util.Assert;
 
 
 @SpringBootTest
-@ContextConfiguration(classes = PlayerSerivceApplication.class)
 class PlayerSerivceApplicationTests {
 
+	@Autowired
 	private PlayerServiceImpl playerService;
 
 	@Test
-	void ContextLoads(){
-
+	void testWinning(){
+        String result = "You Win!";
+		String first = "Rock";
+		String second = "Scissor";
+		Assertions.assertEquals(result , playerService.evaluateMove(first , second));
 	}
 
 	@Test
-	public void testWinning(){
-        String result = "You win!";
+	void testLosing(){
+		String result = "You Lose!";
 		String first = "Rock";
-		String second = "Scissor";
+		String second = "Paper";
+		Assertions.assertEquals(result , playerService.evaluateMove(first , second));
+	}
 
-		assert(result).equals(playerService.evaluateMove(first , second));
-
-
+	@Test
+	void testTie(){
+		String result = "It's a tie!";
+		String first = "Rock";
+		String second = "Rock";
+		Assertions.assertEquals(result , playerService.evaluateMove(first , second));
 	}
 
 }
