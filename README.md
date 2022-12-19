@@ -26,7 +26,7 @@ Through following command:
     
 Maven will install all the dependencies and followed by run the application
 
-> To test the application
+> Swagger is already integrated and can be used for using API
 
     http://localhost:8001/swagger-ui.html
     
