@@ -11,7 +11,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Player {
 
-    //This is the model of Game We take String playerMove in parameter and return all three String accordingly
+    //This is the model of Game We take String playerMove in parameter and return the player
 
     private String playerMove;
     private String computerMove;
