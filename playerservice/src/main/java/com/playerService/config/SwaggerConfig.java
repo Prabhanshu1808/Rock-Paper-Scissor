@@ -28,9 +28,9 @@ public class SwaggerConfig {
                                 "0.0.1",
                                 null,
                                 new Contact(
-                                        "Passionate developer",
+                                        "Prabhanshu Gupta",
                                         null,
-                                        "malik_sharif@ymail.com"),
+                                        "Prabhanshu1808@gmail.com"),
                                 null,
                                 null,
                                 new ArrayList<>()))
