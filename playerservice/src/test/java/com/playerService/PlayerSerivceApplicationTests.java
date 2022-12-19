@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.util.Assert;
 
 
 @SpringBootTest
@@ -17,7 +16,7 @@ class PlayerSerivceApplicationTests {
 
 	@Test
 	void testWinning(){
-        String result = "You Win!";
+        String result = "Player win!";
 		String first = "Rock";
 		String second = "Scissor";
 		Assertions.assertEquals(result , playerService.evaluateMove(first , second));
@@ -25,7 +24,7 @@ class PlayerSerivceApplicationTests {
 
 	@Test
 	void testLosing(){
-		String result = "You Lose!";
+		String result = "Computer win!";
 		String first = "Rock";
 		String second = "Paper";
 		Assertions.assertEquals(result , playerService.evaluateMove(first , second));

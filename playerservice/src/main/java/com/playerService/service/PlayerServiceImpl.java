@@ -29,7 +29,7 @@ public class PlayerServiceImpl {
 
     //This is the logic of Rock , paper and scissor Game
     public String evaluateMove(String playerMove ,String computerMove){
-          validateChoice(playerMove);
+
           String result = "";
 
           if(playerMove == null){
@@ -40,26 +40,26 @@ public class PlayerServiceImpl {
           }
           else if(playerMove.equals("Rock")){
               if(computerMove.equals("Paper")){
-                  result = "You Lose!";
+                  result = "Computer win!";
               }
               else if(computerMove.equals("Scissor")){
-                  result = "You Win!";
+                  result = "Player win!";
               }
           }
           else if(playerMove.equals("Paper")){
             if(computerMove.equals("Rock")){
-                result = "You Win!";
+                result = "Player win!";
             }
             else if(computerMove.equals("Scissor")){
-                result = "You Lose!";
+                result = "Computer win!";
             }
           }
           else if(playerMove.equals("Scissor")){
             if(computerMove.equals("Paper")){
-                result = "You Win!";
+                result = "Player win!";
             }
             else if(computerMove.equals("Rock")){
-                result = "You Lose!";
+                result = "Computer win!";
             }
           }
           else{
@@ -68,17 +68,4 @@ public class PlayerServiceImpl {
           return result;
     }
 
-    //Here we validate player move
-    public void validateChoice(String playerMove){
-
-        if (Objects.isNull(playerMove)) {
-            String msg = String.format("Choice cannot be empty, playerOneChoice: {}", playerMove);
-            throw new IllegalArgumentException(msg);
-        }
-        if(!(playerMove.equals("Rock") || playerMove.equals("Paper") || playerMove.equals("Scissor"))){
-            String msg = "You entered a wrong move, please Enter(Rock, Paper or Scissor)";
-
-        }
-
-    }
 }
