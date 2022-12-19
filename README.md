@@ -1,6 +1,6 @@
 # Rock-paper-scissor
 
-This project is based on Spring boot application 
+This project is based on Spring boot Microservice application 
 
 #### Technology used
 - Java 17 : programming language 
