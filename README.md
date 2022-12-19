@@ -30,8 +30,6 @@ Maven will install all the dependencies and followed by run the application
 
     http://localhost:8001/swagger-ui.html
     
-    
-#### Architectural points and Terminologies used in the project
 
 > Game rules
  - Rock beats Scissors
